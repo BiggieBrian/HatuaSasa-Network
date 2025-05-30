@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import DonationModal from './DonationModal';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,9 +60,11 @@ const Header = () => {
             >
               Get Involved
             </button>
-            <Button className="bg-hatua-yellow hover:bg-hatua-yellow/90 text-black">
-              Donate
-            </Button>
+            <DonationModal>
+              <Button className="bg-hatua-yellow hover:bg-hatua-yellow/90 text-black">
+                Donate
+              </Button>
+            </DonationModal>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -109,9 +112,11 @@ const Header = () => {
               >
                 Get Involved
               </button>
-              <Button className="bg-hatua-yellow hover:bg-hatua-yellow/90 text-black w-fit">
-                Donate
-              </Button>
+              <DonationModal>
+                <Button className="bg-hatua-yellow hover:bg-hatua-yellow/90 text-black w-fit">
+                  Donate
+                </Button>
+              </DonationModal>
             </div>
           </nav>
         )}

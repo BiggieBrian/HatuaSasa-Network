@@ -1,4 +1,6 @@
 
+import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
+
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -36,11 +38,21 @@ const Footer = () => {
               good governance, and civic empowerment in Kenya and beyond.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-2xl hover:text-hatua-yellow transition-colors">📘</a>
-              <a href="#" className="text-2xl hover:text-hatua-yellow transition-colors">🐦</a>
-              <a href="#" className="text-2xl hover:text-hatua-yellow transition-colors">📷</a>
-              <a href="#" className="text-2xl hover:text-hatua-yellow transition-colors">💼</a>
-              <a href="#" className="text-2xl hover:text-hatua-yellow transition-colors">📺</a>
+              <a href="#" className="text-gray-300 hover:text-hatua-yellow transition-colors">
+                <Facebook className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-hatua-yellow transition-colors">
+                <Twitter className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-hatua-yellow transition-colors">
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-hatua-yellow transition-colors">
+                <Linkedin className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-hatua-yellow transition-colors">
+                <Youtube className="h-6 w-6" />
+              </a>
             </div>
           </div>
 
@@ -75,7 +87,7 @@ const Footer = () => {
               </p>
               <p className="flex items-start space-x-2">
                 <span>📧</span>
-                <span>info@hatuasasa.org</span>
+                <span>hatuasasa24@gmail.com</span>
               </p>
               <p className="flex items-start space-x-2">
                 <span>🌐</span>

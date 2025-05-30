@@ -2,6 +2,8 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
+import ContactModal from './ContactModal';
+import DonationModal from './DonationModal';
 
 const GetInvolved = () => {
   const [email, setEmail] = useState('');
@@ -19,21 +21,24 @@ const GetInvolved = () => {
       icon: "🤝",
       description: "Join our mission on the ground. Whether you're a student, activist, or professional — your time can make a difference.",
       action: "Join as Volunteer",
-      color: "bg-hatua-green"
+      color: "bg-hatua-green",
+      type: "volunteer" as const
     },
     {
       title: "Partner With Us",
       icon: "🤝",
       description: "We work with civil society groups, government bodies, academic institutions, and private sector partners to create long-lasting change.",
       action: "Explore Partnerships",
-      color: "bg-hatua-blue"
+      color: "bg-hatua-blue",
+      type: "partnership" as const
     },
     {
       title: "Donate",
       icon: "💚",
       description: "Support our programs and help us reach more communities. Every contribution counts toward a stronger and more sustainable future.",
       action: "Donate Now",
-      color: "bg-hatua-yellow text-black"
+      color: "bg-hatua-yellow text-black",
+      type: "donate" as const
     }
   ];
 
@@ -57,9 +62,20 @@ const GetInvolved = () => {
                 <div className="text-5xl mb-4">{option.icon}</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{option.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{option.description}</p>
-                <Button className={`${option.color} hover:opacity-90 w-full font-semibold`}>
-                  {option.action}
-                </Button>
+                
+                {option.type === 'donate' ? (
+                  <DonationModal>
+                    <Button className={`${option.color} hover:opacity-90 w-full font-semibold`}>
+                      {option.action}
+                    </Button>
+                  </DonationModal>
+                ) : (
+                  <ContactModal type={option.type}>
+                    <Button className={`${option.color} hover:opacity-90 w-full font-semibold`}>
+                      {option.action}
+                    </Button>
+                  </ContactModal>
+                )}
               </div>
             </div>
           ))}

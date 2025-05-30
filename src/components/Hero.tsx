@@ -1,5 +1,6 @@
 
 import { Button } from '@/components/ui/button';
+import DonationModal from './DonationModal';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -44,17 +45,19 @@ const Hero = () => {
           <Button 
             size="lg" 
             variant="outline" 
-            className="border-white text-white hover:bg-white hover:text-hatua-green font-semibold px-8 py-3 text-lg"
+            className="border-white text-black bg-white hover:bg-gray-100 hover:text-black font-semibold px-8 py-3 text-lg"
             onClick={() => scrollToSection('get-involved')}
           >
             Partner With Us
           </Button>
-          <Button 
-            size="lg" 
-            className="bg-hatua-green hover:bg-hatua-green/90 text-white font-semibold px-8 py-3 text-lg"
-          >
-            Donate
-          </Button>
+          <DonationModal>
+            <Button 
+              size="lg" 
+              className="bg-hatua-green hover:bg-hatua-green/90 text-white font-semibold px-8 py-3 text-lg"
+            >
+              Donate
+            </Button>
+          </DonationModal>
         </div>
       </div>
       
