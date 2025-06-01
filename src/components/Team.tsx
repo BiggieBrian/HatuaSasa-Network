@@ -20,13 +20,13 @@ const Team = () => {
     {
       name: "Benedictus Rono",
       role: "Advisory Board Chairperson",
-      image: "/lovable-uploads/c066f274-ac00-4e87-9092-f28a07cc80be.png",
+      image: "/lovable-uploads/BenedictusRono.jpeg",
       bio: "Passionate advocate for civic education and community-driven development initiatives.",
     },
     {
       name: "Mr. Robert Mwangi",
       role: "Advisory Board Member",
-      image: "/lovable-uploads/c66f9f2e-8f3a-4e2f-b9d5-1a7c8d9e0f12.png",
+      image: "/lovable-uploads/RobertMwangi.jpeg",
       bio: "Expert in strategic planning and organizational development with extensive experience in community empowerment.",
     },
     {
