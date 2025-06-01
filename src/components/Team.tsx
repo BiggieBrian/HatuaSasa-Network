@@ -25,7 +25,7 @@ const Team = () => {
     },
     {
       name: "Mr. Robert Mwangi",
-      role: "Advisory Board Member",
+      role: "Member",
       image: "/lovable-uploads/RobertMwangi.jpeg",
       bio: "Expert in strategic planning and organizational development with extensive experience in community empowerment.",
     },
