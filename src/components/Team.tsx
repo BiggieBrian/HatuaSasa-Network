@@ -1,5 +1,7 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+
 const Team = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const scrollToSection = (sectionId: string) => {
@@ -7,7 +9,26 @@ const Team = () => {
     element?.scrollIntoView({ behavior: "smooth" });
     setIsMenuOpen(false);
   };
+
   const teamMembers = [
+    {
+      name: "Sen. Amos Matagaro",
+      role: "Executive Director",
+      image: "/lovable-uploads/533c7cfb-d756-42d3-91e8-ccc5de786f84.png",
+      bio: "Dedicated to empowering young leaders and fostering youth-led innovation in governance.",
+    },
+    {
+      name: "Benedictus Rono",
+      role: "Advisory Board Chairperson",
+      image: "/lovable-uploads/c066f274-ac00-4e87-9092-f28a07cc80be.png",
+      bio: "Passionate advocate for civic education and community-driven development initiatives.",
+    },
+    {
+      name: "Mr. Robert Mwangi",
+      role: "Advisory Board Member",
+      image: "/lovable-uploads/c66f9f2e-8f3a-4e2f-b9d5-1a7c8d9e0f12.png",
+      bio: "Expert in strategic planning and organizational development with extensive experience in community empowerment.",
+    },
     {
       name: "CPA Wycliff Bichanga",
       role: "Member",
@@ -21,16 +42,10 @@ const Team = () => {
       bio: "Expert in climate justice and environmental policy with years of experience.",
     },
     {
-      name: "Mr. Dominic Omboga",
-      role: "Advisory Board Chair",
+      name: "Mr. Dennis Omboga",
+      role: "Member",
       image: "/lovable-uploads/a1f0dd39-e68e-4fd9-b989-2e897f3ceba6.png",
       bio: "Passionate advocate for civic education and community-driven development initiatives.",
-    },
-    {
-      name: "Sen. Amos Matagaro",
-      role: "Executive Director",
-      image: "/lovable-uploads/533c7cfb-d756-42d3-91e8-ccc5de786f84.png",
-      bio: "Dedicated to empowering young leaders and fostering youth-led innovation in governance.",
     },
   ];
 
@@ -47,7 +62,7 @@ const Team = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <div
               key={index}

@@ -5,7 +5,7 @@ const Programs = () => {
       title: "Climate Change",
       icon: "🌍",
       color: "bg-gradient-to-br from-hatua-green to-green-600",
-      description: "We are deeply committed to advocating for climate action and justice.",
+      description: "At HatuaSasa Network, we are deeply committed to advocating for climate action and justice. We recognize the urgent challenges posed by climate change and work tirelessly to promote sustainable practices and policies that protect our environment. Through community engagement and awareness campaigns, we strive to empower individuals and organizations to take action against climate change, ensuring that the voices of those most affected are heard in decision-making processes.",
       activities: [
         "Promote sustainable environmental practices",
         "Engage communities in tree planting and clean-up campaigns",
@@ -19,7 +19,7 @@ const Programs = () => {
       title: "Governance",
       icon: "🏛️",
       color: "bg-gradient-to-br from-hatua-blue to-blue-600",
-      description: "We advocate for transparent, accountable, and inclusive governance systems.",
+      description: "We believe that good governance is the foundation of thriving communities. HatuaSasa Network advocates for transparent, accountable, and participatory local and county governance. Our efforts focus on promoting civic engagement, supporting policy reforms, and enhancing the capacity of local governments to serve their constituents. By fostering an environment of accountability and integrity, we aim to strengthen democracy and improve the quality of life for all citizens.",
       activities: [
         "Civic engagement campaigns",
         "Policy reform advocacy at local and county levels",
@@ -33,7 +33,7 @@ const Programs = () => {
       title: "Community Empowerment",
       icon: "👥",
       color: "bg-gradient-to-br from-hatua-yellow to-orange-500",
-      description: "Empowering people is at the heart of our mission.",
+      description: "Empowering communities through civic education is at the heart of our mission. HatuaSasa Network is dedicated to promoting awareness of rights and responsibilities among community members. Through workshops, training sessions, and advocacy initiatives, we equip individuals with the knowledge and skills necessary to participate actively in civic life. Our goal is to build informed and engaged citizens who can effectively contribute to the development and well-being of their communities.",
       activities: [
         "Civic education workshops",
         "Leadership and advocacy training",
@@ -53,8 +53,7 @@ const Programs = () => {
             What We Do
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our comprehensive programs address the interconnected challenges of our time through 
-            three core pillars of action.
+            Together, these thematic areas form the foundation of our work, as we strive to create a just and equitable society for all Kenyans.
           </p>
         </div>
 
@@ -64,7 +63,7 @@ const Programs = () => {
               <div className={`${program.color} p-6 text-white`}>
                 <div className="text-4xl mb-3">{program.icon}</div>
                 <h3 className="text-2xl font-bold mb-2">{program.title}</h3>
-                <p className="text-lg opacity-90">{program.description}</p>
+                <p className="text-lg opacity-90 leading-relaxed">{program.description}</p>
               </div>
               
               <div className="p-6">
