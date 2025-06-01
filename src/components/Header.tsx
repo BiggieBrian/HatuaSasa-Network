@@ -1,10 +1,12 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 import DonationModal from './DonationModal';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -12,11 +14,21 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const navigateToEvents = () => {
+    navigate('/events');
+    setIsMenuOpen(false);
+  };
+
+  const navigateHome = () => {
+    navigate('/');
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
+          <button onClick={navigateHome} className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/c066f274-ac00-4e87-9092-f28a07cc80be.png" 
               alt="HatuaSasa Network Logo" 
@@ -26,7 +38,7 @@ const Header = () => {
               <h1 className="text-xl font-bold text-hatua-green">HatuaSasa</h1>
               <p className="text-sm text-hatua-blue font-medium">NETWORK</p>
             </div>
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
@@ -53,6 +65,12 @@ const Header = () => {
               className="text-gray-700 hover:text-hatua-green transition-colors"
             >
               Team
+            </button>
+            <button 
+              onClick={navigateToEvents}
+              className="text-gray-700 hover:text-hatua-green transition-colors"
+            >
+              Events
             </button>
             <button 
               onClick={() => scrollToSection('get-involved')}
@@ -105,6 +123,12 @@ const Header = () => {
                 className="text-left text-gray-700 hover:text-hatua-green transition-colors"
               >
                 Team
+              </button>
+              <button 
+                onClick={navigateToEvents}
+                className="text-left text-gray-700 hover:text-hatua-green transition-colors"
+              >
+                Events
               </button>
               <button 
                 onClick={() => scrollToSection('get-involved')}
