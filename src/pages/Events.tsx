@@ -73,8 +73,16 @@ const Events = () => {
           text: "Read the full article: Empowering Climate Champions"
         },
         images: [
-          "/lovable-uploads/8d14fe5e-5666-46d9-b4f1-c5897be62845.png",
-          "/lovable-uploads/370f3bcd-a3be-403c-8d31-aa94913f74f2.png"
+          "/lovable-uploads/42562e89-aff0-4207-aa41-6f36a2cd05b0.png",
+          "/lovable-uploads/87461f51-9292-48d3-bd5f-7fe54fa958d2.png",
+          "/lovable-uploads/2cd8f7a7-03c4-4e19-8e15-d9837b998ad3.png",
+          "/lovable-uploads/0920e2ac-9f54-433c-89f3-4b14dc30a2f3.png",
+          "/lovable-uploads/55f9c3ad-664e-4d5d-a17c-3dd4dbb7bfa4.png",
+          "/lovable-uploads/fec6d8a4-9e8a-4ea1-9362-2f73053f2887.png",
+          "/lovable-uploads/f6ce13a1-5943-401d-997b-eb6ce284d5e4.png",
+          "/lovable-uploads/e47e34fe-393a-48a6-b812-718fc9fb590d.png",
+          "/lovable-uploads/20d1bbbe-f1aa-4a8a-af14-bcf2748bb219.png",
+          "/lovable-uploads/c0e27725-57d1-4578-8e23-2bb9c9e74dd9.png"
         ]
       }
     }
