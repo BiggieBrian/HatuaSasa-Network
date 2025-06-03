@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -18,7 +17,7 @@ const Team = () => {
       bio: "Dedicated to empowering young leaders and fostering youth-led innovation in governance.",
     },
     {
-      name: "Benedictus Rono",
+      name: "Cherotich Rono",
       role: "Advisory Board Chairperson",
       image: "/lovable-uploads/BenedictusRono.jpeg",
       bio: "Passionate advocate for civic education and community-driven development initiatives.",
