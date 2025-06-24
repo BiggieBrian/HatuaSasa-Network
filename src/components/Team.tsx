@@ -3,21 +3,15 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const Team = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openBios, setOpenBios] = useState<{ [key: string]: boolean }>({});
-
-  const toggleBio = (memberName: string) => {
-    setOpenBios(prev => ({
-      ...prev,
-      [memberName]: !prev[memberName]
-    }));
-  };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -103,7 +97,7 @@ She currently serves as the program lead overseeing NDI's fiscal transparency an
     },
   ];
 
-  const renderMemberCard = (member: any, showCollapsibleBio = false) => (
+  const renderMemberCard = (member: any) => (
     <div
       key={member.name}
       className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
@@ -126,24 +120,43 @@ She currently serves as the program lead overseeing NDI's fiscal transparency an
           {member.bio}
         </p>
         
-        {showCollapsibleBio && member.fullBio && (
-          <Collapsible open={openBios[member.name]} onOpenChange={() => toggleBio(member.name)}>
-            <CollapsibleTrigger className="flex items-center justify-between w-full p-3 bg-hatua-green/10 rounded-lg hover:bg-hatua-green/20 transition-colors">
-              <span className="font-medium text-hatua-green">Read Full Bio</span>
-              {openBios[member.name] ? (
-                <ChevronUp className="h-4 w-4 text-hatua-green" />
-              ) : (
-                <ChevronDown className="h-4 w-4 text-hatua-green" />
-              )}
-            </CollapsibleTrigger>
-            <CollapsibleContent className="mt-4">
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <div className="text-gray-700 text-sm leading-relaxed whitespace-pre-line">
-                  {member.fullBio}
+        {member.fullBio && (
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button 
+                variant="outline" 
+                className="w-full bg-hatua-green/10 border-hatua-green text-hatua-green hover:bg-hatua-green hover:text-white transition-colors"
+              >
+                Read Full Bio
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+              <DialogHeader>
+                <div className="flex items-center gap-4 mb-4">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-20 h-20 rounded-full object-cover"
+                  />
+                  <div>
+                    <DialogTitle className="text-2xl font-bold text-gray-900">
+                      {member.name}
+                    </DialogTitle>
+                    <p className="text-hatua-blue font-semibold text-lg">
+                      {member.role}
+                    </p>
+                  </div>
+                </div>
+              </DialogHeader>
+              <div className="mt-6">
+                <div className="prose prose-gray max-w-none">
+                  <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                    {member.fullBio}
+                  </div>
                 </div>
               </div>
-            </CollapsibleContent>
-          </Collapsible>
+            </DialogContent>
+          </Dialog>
         )}
       </div>
     </div>
@@ -168,7 +181,7 @@ She currently serves as the program lead overseeing NDI's fiscal transparency an
             Advisory Board
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {advisoryBoardMembers.map((member) => renderMemberCard(member, member.fullBio ? true : false))}
+            {advisoryBoardMembers.map((member) => renderMemberCard(member))}
           </div>
         </div>
 
@@ -178,7 +191,7 @@ She currently serves as the program lead overseeing NDI's fiscal transparency an
             Secretariat
           </h3>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {secretariatMembers.map((member) => renderMemberCard(member, false))}
+            {secretariatMembers.map((member) => renderMemberCard(member))}
           </div>
         </div>
 
