@@ -62,9 +62,6 @@ Benedictus has managed nationwide election agent training in collaboration with 
 
 She currently serves as the program lead overseeing NDI's fiscal transparency and accountability and youth programming in Kenya. In addition, she coordinates exchanges between the Kenya National Assembly and the U.S. House of Representatives through the House Democracy Partnership.`
     },
-  ];
-
-  const teamMembers = [
     {
       name: "Mr. Robert Mwangi",
       role: "Advisory Board Member",
@@ -168,17 +165,10 @@ She currently serves as the program lead overseeing NDI's fiscal transparency an
         {/* Advisory Board Section */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Leadership Team
+            Advisory Board
           </h3>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
-            {advisoryBoardMembers.map((member) => renderMemberCard(member, true))}
-          </div>
-          
-          <h4 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            Advisory Board Members
-          </h4>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member) => renderMemberCard(member, false))}
+            {advisoryBoardMembers.map((member) => renderMemberCard(member, member.fullBio ? true : false))}
           </div>
         </div>
 
