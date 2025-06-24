@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
@@ -88,12 +87,14 @@ She currently serves as the program lead overseeing NDI's fiscal transparency an
       role: "Senior Principal Program Officer",
       image: "/lovable-uploads/7e412934-a205-48aa-9c2a-38ddae8a3a18.png",
       bio: "Nyabuto Hamphrey Okanga is a passionate Kenyan public health professional dedicated to climate justice through community-led solutions. He actively works to empower vulnerable communities to respond to climate related challenges. His grassroots approach, data-driven mindset, and commitment to sustainability align with HatuaSasa's mission to build citizen-led climate resilience. Nyabuto sees climate action not as a crisis, but as a powerful opportunity to transform lives and create lasting change from the ground up.",
+      fullBio: "Nyabuto Hamphrey Okanga is a passionate Kenyan public health professional dedicated to climate justice through community-led solutions. He actively works to empower vulnerable communities to respond to climate related challenges. His grassroots approach, data-driven mindset, and commitment to sustainability align with HatuaSasa's mission to build citizen-led climate resilience. Nyabuto sees climate action not as a crisis, but as a powerful opportunity to transform lives and create lasting change from the ground up."
     },
     {
       name: "Brian Achira Ongaga",
       role: "Head Of ICT Department",
-      image: "/lovable-uploads/533c7cfb-d756-42d3-91e8-ccc5de786f84.png", // placeholder until we get his image
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
       bio: "Coming soon",
+      fullBio: "Coming soon"
     },
   ];
 
